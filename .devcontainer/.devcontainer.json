@@ -1,0 +1,20 @@
+{
+    "name": "Nextcloud Dev Environment",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "nextcloud",
+    "workspaceFolder": "/var/www/html",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-azuretools.vscode-docker",
+                "felixfbecker.php-debug",
+                "bmewburn.vscode-intelephense-client",
+                "neilbrayfield.php-docblocker"
+            ],
+            "settings": {
+                "php.validate.executablePath": "/usr/local/bin/php",
+                "php.suggest.basic": false
+            }
+        }
+    }
+}
