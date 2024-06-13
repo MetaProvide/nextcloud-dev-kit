@@ -4,6 +4,7 @@
     "service": "nextcloud",
     "workspaceFolder": "/var/www/html",
     "customizations": {
+        "forwardPorts": [9003],
         "vscode": {
             "extensions": [
                 "ms-azuretools.vscode-docker",
@@ -12,9 +13,14 @@
                 "neilbrayfield.php-docblocker"
             ],
             "settings": {
-                "php.validate.executablePath": "/usr/local/bin/php",
-                "php.suggest.basic": false
-            }
+               "php.validate.executablePath": "/usr/local/bin/php",
+                "php.suggest.basic": false,
+                "php.debug.pathMappings": {
+                    "/var/www/html": "${workspaceFolder}"
+                },
+                "php.debug.serverReadyAction": "request",
+                "php.debug.serverReadyPattern": "^\\s*\\[\\d+\\]\\s*\\[\\d+\\]\\s*listening on \\[::1\\]:\\d+$"
+            },
         }
     }
 }

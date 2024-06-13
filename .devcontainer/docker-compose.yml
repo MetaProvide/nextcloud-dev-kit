@@ -1,11 +1,14 @@
 services:
   nextcloud:
-    image: nextcloud:28
+    build:
+      context: nextcloud
+      dockerfile: Dockerfile.28
     container_name: nextcloud
     ports:
     - "8080:80"
     volumes:
     - nextcloud_data:/var/www/html
+    - ../launch.json:/var/www/html/.vscode/launch.json
     - ../files_external_ethswarm:/var/www/html/custom_apps/files_external_ethswarm
     depends_on:
     - db

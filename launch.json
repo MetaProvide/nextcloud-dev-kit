@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Listen for Xdebug",
+            "type": "php",
+            "request": "launch",
+            "port": 9003,
+            "pathMappings": {
+                "/var/www/html": "${workspaceFolder}",
+                "/var/www/html/apps-extra/files_external_ethswarm": "${workspaceFolder}/files_external_ethswarm"
+            },
+            "serverSourceRoot": "/var/www/html",
+            "localSourceRoot": "${workspaceFolder}"
+        }
+    ]
+}
